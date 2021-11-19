@@ -8,8 +8,9 @@ function findAdjacent(nodeName, vertices, edges){
     return edges.filter((edge) => {
         return edge.includes(nodeName)
     }).map((edge) => {
+        console.log(edge)
+        console.log(nodeName)
         return edge.filter((node) => {
-            console.log(node)
             return (node != nodeName)
         })[0]
     }).map((name) => {
